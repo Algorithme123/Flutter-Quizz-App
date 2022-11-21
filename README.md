@@ -16,6 +16,6 @@
 
 ![image](https://user-images.githubusercontent.com/101357738/202975274-cb112941-aadb-487c-9ebf-e959e40a3632.png)
 
-#score
+# score
 
 ![image](https://user-images.githubusercontent.com/101357738/202975376-0913c4d2-dc6a-4c1c-9fb0-0ce07b709890.png)
