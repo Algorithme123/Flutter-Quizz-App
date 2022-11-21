@@ -33,6 +33,8 @@ class _PageQuizzState extends State<PageQuizz> {
         true, 'La bûche, fameuse chaise de bucheron', 'buche.jpg'),
     Question('Le module lunaire Eagle de possédait de 4Ko de Ram', true,
         'Dire que je me plains avec mes 8GO de ram sur mon mac', 'eagle.jpg'),
+    Question('Tu connais GOGO k. Daniel', true,
+        "C'est lui qui a developper cet Application", 'danielGOGO.jpg'),
   ];
   int index = 0;
   int score = 0;
