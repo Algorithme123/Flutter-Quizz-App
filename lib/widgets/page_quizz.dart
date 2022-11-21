@@ -14,7 +14,7 @@ class _PageQuizzState extends State<PageQuizz> {
 
   List<Question> listeQuestions = [
     Question('La devise du TOGO est Travail-liberté-Patrie', true, '',
-        'belgique.JPG'),
+        'togo.webp'),
     Question('La lune va finir par tomber sur terre à cause de la gravité',
         false, 'Au contraire la lune s\'éloigne', 'lune.jpg'),
     Question('La Russie est plus grande en superficie que Pluton', true, '',
@@ -97,13 +97,13 @@ class _PageQuizzState extends State<PageQuizz> {
 
   Future<Null> dialogue(bool b) async {
     bool bonneReponse = (b == question.reponse);
-    String vrai = "images assets/vrai.jpg";
-    String faux = "images assets/faux.jpg";
+    String vrai = "images assets/vrai.webp";
+    String faux = "images assets/faux.webp";
     if(bonneReponse){
       score++;
     }
     return showDialog(context: context,barrierDismissible: false, builder: (BuilderContext){
-      
+
   return SimpleDialog(
     title: CustomText((bonneReponse)? "C'est gagné ! " : "desolé vous avez perdu",factor: 1.4,color: (bonneReponse)? Colors.green : Colors.red,),
     contentPadding: EdgeInsets.all(20.0),
@@ -123,7 +123,40 @@ class _PageQuizzState extends State<PageQuizz> {
     );
   }
 
+
+  Future <Null> alerte() async{
+    return showDialog(context: context,
+
+        barrierDismissible : false,
+        builder: (BuildContext buildeContext){
+      return  AlertDialog(
+        title: CustomText("C'est fini", color:  Colors.blue, factor: 1.25,),
+        contentPadding: EdgeInsets.all(10.0),
+        content: CustomText("Votre score : $score / $index",color: Colors.black,),
+        actions: [
+          TextButton(onPressed: (()=>{
+            Navigator.pop(buildeContext),
+            Navigator.pop(context)
+          }), child: CustomText(
+            "OKAY",
+            factor: 1.25,
+              color: Colors.blue,
+          ))
+
+        ],
+      );
+        });
+  }
   void questionSuivante(){
+    if(index<listeQuestions.length -1){
+      index++;
+     setState(() {
+       question = listeQuestions[index];
+     });
+    }else
+      {
+          alerte();
+      }
 
   }
 }
