@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/models/question.dart';
-import 'package:quiz/widgets/custom_text.dart';
+import 'package:QuizzDaniel/models/question.dart';
+import 'package:QuizzDaniel/widgets/custom_text.dart';
 
 class PageQuizz extends StatefulWidget {
   const PageQuizz({Key? key}) : super(key: key);
@@ -33,7 +33,7 @@ class _PageQuizzState extends State<PageQuizz> {
         true, 'La bûche, fameuse chaise de bucheron', 'buche.jpg'),
     Question('Le module lunaire Eagle de possédait de 4Ko de Ram', true,
         'Dire que je me plains avec mes 8GO de ram sur mon mac', 'eagle.jpg'),
-    Question('Tu connais GOGO k. Daniel', true,
+    Question(' GOGO k. Daniel est un Philosophe', false,
         "C'est lui qui a developper cet Application", 'danielGOGO.jpg'),
   ];
   int index = 0;

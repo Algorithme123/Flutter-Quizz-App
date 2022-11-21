@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/widgets/custom_text.dart';
-import 'package:quiz/widgets/page_quizz.dart';
+import 'package:QuizzDaniel/widgets/custom_text.dart';
+import 'package:QuizzDaniel/widgets/page_quizz.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
